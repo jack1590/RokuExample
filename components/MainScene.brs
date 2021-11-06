@@ -13,5 +13,4 @@ end sub
 
 sub onTokenRecived(event)
   m.global.addFields({"apiToken": event.getData()})
-  stop
 end sub
