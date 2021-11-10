@@ -2,15 +2,22 @@ sub init()
   m.top.backgroundURI = "pkg:/images/DeepSpace.jpg"
   m.config = CreateObject("RoSGNode", "Config")
   m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
+  m.infoMoviesTask = CreateObject("RoSGNode", "InfoMoviesTask")
 
   getApiToken()
 end sub
 
 sub getApiToken()
-  m.apiTokenTask.control = "RUN"
   m.apiTokenTask.observeField("token", "onTokenRecived")
+  m.apiTokenTask.control = "RUN"
 end sub
 
 sub onTokenRecived(event)
   m.global.addFields({"apiToken": event.getData()})
+  m.infoMoviesTask.observeField("info", "onInfoRecived")
+  m.infoMoviesTask.control = "RUN"
+end sub
+
+sub onInfoRecived(event)
+print "info recive"; event.getData()[0]
 end sub
