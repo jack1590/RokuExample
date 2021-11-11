@@ -11,4 +11,23 @@ function getInfo()
     response = parseJson(stringResponse)
 
     m.top.info = response
+
+    content = createObject("roSGNode", "ContentNode")
+    section = content.createChild("ContentNode")
+
+    for each profile in response
+        item = section.createChild("ContentNode")
+        item.FHDPOSTERURL = profile.uri
+        item.HDPOSTERURL = profile.uri
+        item.SDPOSTERURL = profile.uri
+        item.Description = profile.name
+        item.Title = profile.name
+        item.id = profile.id
+        item.ContentType = profile.type
+        item.EpisodeNumber = profile.episodeNo
+        item.addFields({"parentId": profile.parentId})
+    end for
+
+    m.top.output = content
+
 end function

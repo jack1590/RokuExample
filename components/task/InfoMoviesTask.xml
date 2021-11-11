@@ -4,5 +4,7 @@
 
 <interface>
     <field id="info" type="array" />
+    <field id="output" type="node" />
 </interface>
+
 </component>

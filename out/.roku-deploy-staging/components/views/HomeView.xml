@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "HomeView" extends="Group">
+  <script type="text/brightscript" uri="HomeView.brs" />
+  <children>
+
+    <LayoutGroup
+      id="group"
+      horizAlignment="center"
+      itemSpacings="[200]">
+
+      <Label id="title" color="#FFFFFF" text="What you want to watch?" >
+        <Font role="font" uri="pkg:/fonts/Netflix-Semibold.ttf" size="50" />
+      </Label>
+
+      <RowList
+        id="rowList"
+        itemComponentName="Profile"
+        numRows="1"
+        rowItemSize="[[210, 400]]"
+        itemSize="[1250, 400]"
+        showRowLabel="[false]"
+        rowItemSpacing="[[50,0]]" />
+        
+    </LayoutGroup>
+
+  </children>
+</component>

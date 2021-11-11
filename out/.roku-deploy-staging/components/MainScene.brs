@@ -14,10 +14,8 @@ end sub
 
 sub onTokenRecived(event)
   m.global.addFields({"apiToken": event.getData()})
-  m.infoMoviesTask.observeField("info", "onInfoRecived")
   m.infoMoviesTask.control = "RUN"
+  m.HomeView = m.top.findNode("homeView")
+  m.HomeView.setFocus(true)
 end sub
 
-sub onInfoRecived(event)
-print "info recive"; event.getData()[0]
-end sub
