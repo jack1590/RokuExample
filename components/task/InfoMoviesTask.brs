@@ -17,9 +17,6 @@ function getInfo()
 
     for each profile in response
         item = section.createChild("ContentNode")
-        item.FHDPOSTERURL = profile.uri
-        item.HDPOSTERURL = profile.uri
-        item.SDPOSTERURL = profile.uri
         item.Description = profile.name
         item.Title = profile.name
         item.id = profile.id

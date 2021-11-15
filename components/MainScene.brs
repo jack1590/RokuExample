@@ -15,7 +15,7 @@ end sub
 sub onTokenRecived(event)
   m.global.addFields({"apiToken": event.getData()})
   m.infoMoviesTask.control = "RUN"
-  m.HomeView = m.top.findNode("homeView")
+  m.HomeView = m.top.findNode("HomeView")
   m.HomeView.setFocus(true)
 end sub
 
