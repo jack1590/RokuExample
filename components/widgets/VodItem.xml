@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="vodItem" extends="group">
+<component name="VodItem" extends="group">
  <script type="text/brightscript" uri="VodItem.brs"/>
     <interface>
 
@@ -23,7 +23,7 @@
        height="210">
 
         <Poster
-         id="profile"
+         id="vodItem"
          uri=""
          width="200"
          height="200"
