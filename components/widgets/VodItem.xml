@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="Profile" extends="group">
- <script type="text/brightscript" uri="Profile.brs"/>
+<component name="vodItem" extends="group">
+ <script type="text/brightscript" uri="VodItem.brs"/>
     <interface>
 
       <field id="itemContent" type="node" />

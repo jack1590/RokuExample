@@ -13,7 +13,7 @@
 
       <RowList
         id="rowList"
-        itemComponentName="Profile"
+        itemComponentName="VodItem"
         numRows="4"
         rowItemSize="[[210, 300]]"
         itemSize="[1250, 320]"
