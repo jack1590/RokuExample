@@ -12,24 +12,12 @@
     <LayoutGroup
      id="group"
      horizAlignment="center"
-     itemSpacings="[30]"
-     translation="[105, 0]">
+     itemSpacings="[30]">
 
-
-      <Rectangle
-       id="background"
-       color="#FFFFFF00"
-       width="210"
-       height="210">
-
-        <Poster
-         id="vodItem"
-         uri=""
-         width="200"
-         height="200"
-         translation="[5,5]"/>
-
-      </Rectangle>
+      <Poster
+        id="vodItem"
+        uri=""
+        loadDisplayMode="scaleToFit"/>
 
       <Label
        id="name"
