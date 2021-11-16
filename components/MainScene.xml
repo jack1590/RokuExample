@@ -3,7 +3,5 @@
   <script type="text/brightscript" uri="MainScene.brs" />
   <children>
 
-  <HomeView id="HomeView" />
-
   </children>
 </component>

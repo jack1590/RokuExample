@@ -1,21 +1,25 @@
 sub init()
   m.top.backgroundURI = "pkg:/images/DeepSpace.jpg"
-  m.config = CreateObject("RoSGNode", "Config")
-  m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
-  m.infoMoviesTask = CreateObject("RoSGNode", "InfoMoviesTask")
 
-  getApiToken()
+  m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
+  m.global.addFields({"config": {}})
+  m.global.observeField("config", "onConfigReady")
+  m.config = CreateObject("RoSGNode", "Config")
+
 end sub
 
-sub getApiToken()
+sub onConfigReady()
+  m.global.unobserveField("config")
   m.apiTokenTask.observeField("token", "onTokenRecived")
   m.apiTokenTask.control = "RUN"
 end sub
 
 sub onTokenRecived(event)
+  m.apiTokenTask = invalid
+  
   m.global.addFields({"apiToken": event.getData()})
-  m.infoMoviesTask.control = "RUN"
-  m.HomeView = m.top.findNode("homeView")
-  m.HomeView.setFocus(true)
+
+  m.homeView = m.top.createChild("HomeView")
+  m.homeView.setFocus(true)
 end sub
 

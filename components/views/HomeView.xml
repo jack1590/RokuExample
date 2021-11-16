@@ -6,20 +6,21 @@
     <LayoutGroup
       id="group"
       horizAlignment="center"
-      itemSpacings="[200]">
+      itemSpacings="[100]">
 
-      <Label id="title" color="#FFFFFF" text="What you want to watch?" >
-        <Font role="font" uri="pkg:/fonts/Netflix-Semibold.ttf" size="50" />
-      </Label>
+      <Label id="title" color="#FFFFFF" text="What you want to watch?" />
+        
 
       <RowList
         id="rowList"
         itemComponentName="Profile"
-        numRows="1"
-        rowItemSize="[[210, 400]]"
-        itemSize="[1250, 400]"
-        showRowLabel="[false]"
-        rowItemSpacing="[[50,0]]" />
+        numRows="4"
+        rowItemSize="[[210, 300]]"
+        itemSize="[1250, 320]"
+        showRowLabel="[true]"
+        rowItemSpacing="[[50, 50]]"
+        itemSpacing="[50, 50]"
+        rowLabelOffset="[[5, 20]]" />
         
     </LayoutGroup>
 
