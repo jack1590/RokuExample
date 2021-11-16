@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "SearchTask" extends="Task">
+
+  <interface>
+    <field id="output" type="node" />
+  </interface>
+
+  <script type="text/brightscript" uri="SearchTask.brs" />
+
+</component>

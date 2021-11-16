@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "HomeView" extends="Group">
+  <script type="text/brightscript" uri="HomeView.brs" />
+  <children>
+
+    <LayoutGroup
+      id="group"
+      horizAlignment="center"
+      itemSpacings="[100]">
+
+      <Label id="title" color="#FFFFFF" text="What you want to watch?" />
+        
+
+      <RowList
+        id="rowList"
+        itemComponentName="VodItem"
+        numRows="4"
+        rowItemSize="[[410, 500], [210, 300]]"
+        itemSize="[1250, 500]"
+        rowHeights="[520, 320]"
+        showRowLabel="[true]"
+        rowItemSpacing="[[50, 50]]"
+        itemSpacing="[50, 50]"
+        rowLabelOffset="[[5, 20]]" />
+        
+    </LayoutGroup>
+
+  </children>
+</component>

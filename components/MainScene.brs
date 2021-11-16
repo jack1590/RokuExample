@@ -21,5 +21,6 @@ sub onTokenRecived(event)
 
   m.homeView = m.top.createChild("HomeView")
   m.homeView.setFocus(true)
+  m.SearchTask.control = "RUN"
 end sub
 
