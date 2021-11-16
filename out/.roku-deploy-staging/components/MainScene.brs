@@ -5,6 +5,7 @@ sub init()
   m.global.addFields({"config": {}})
   m.global.observeField("config", "onConfigReady")
   m.config = CreateObject("RoSGNode", "Config")
+  m.searchTask = CreateObject("RoSGNode", "SearchTask")
 
 end sub
 
@@ -21,6 +22,5 @@ sub onTokenRecived(event)
 
   m.homeView = m.top.createChild("HomeView")
   m.homeView.setFocus(true)
-  m.SearchTask.control = "RUN"
+  m.searchTask.control = "RUN"
 end sub
-

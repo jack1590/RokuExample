@@ -1,5 +1,5 @@
 sub init()
-    m.vodItem = m.top.findNode("vodItem")
+    m.vodItem = m.top.findNode("VodItem")
     m.name = m.top.findNode("name")
     m.group = m.top.findNode("group")
     
