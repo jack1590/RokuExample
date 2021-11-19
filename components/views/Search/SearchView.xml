@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "SearchView" extends="Group">
+  <script type="text/brightscript" uri="SearchView.brs" />
+  <children>
+
+    <Label text="Search view" translation="[300, 500]" /> 
+
+  </children>
+</component>
