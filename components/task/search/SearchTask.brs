@@ -3,9 +3,7 @@ sub init()
 end sub
 
 function getSearchResults()
-    'searchOutput = m.global.
-    'baseUrl = m.global.config.api.baseUrl + "vod/search?s=" + searchOutput
-    baseUrl = m.global.config.api.baseUrl + "vod/search?s=" + "movie"
+    baseUrl = m.global.config.api.baseUrl + "vod/search?s=" + m.top.query
     request = CreateObject("roUrlTransfer")
     request.setUrl(baseUrl)
     request.AddHeader("X-API-TOKEN", m.global.apiToken)

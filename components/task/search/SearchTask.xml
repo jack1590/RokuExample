@@ -2,6 +2,7 @@
 <component name= "SearchTask" extends="Task">
 
   <interface>
+    <field id="query" type="string" value="movie" />
     <field id="output" type="node" />
   </interface>
 
