@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ViewHandler" extends="group">
+ <script type="text/brightscript" uri="ViewHandler.brs"/>
+    <interface>
+
+      <field id="goToView" type="string" onChange="onGoToViewChanged" />
+      
+    </interface>
+
+  <children>
+
+  </children>
+</component>
