@@ -15,7 +15,7 @@ function getSearchResults()
     searchSection.title = "Results"
 
     for each obj in response
-        item = createObject("RoSgNode", "ContentNode")
+        item = searchSection.createChild("ContentNode")
         item.FHDPOSTERURL = "https://johnhockenberry.com/es/wp-content/uploads/sites/5/2021/09/you-season-3-october-2021-release-date-what-we-know-so-far-scaled.jpg"
         item.HDPOSTERURL = "https://johnhockenberry.com/es/wp-content/uploads/sites/5/2021/09/you-season-3-october-2021-release-date-what-we-know-so-far-scaled.jpg"
         item.SDPOSTERURL = "https://johnhockenberry.com/es/wp-content/uploads/sites/5/2021/09/you-season-3-october-2021-release-date-what-we-know-so-far-scaled.jpg"
@@ -25,7 +25,6 @@ function getSearchResults()
         item.ContentType = obj.type
         item.EpisodeNumber = obj.episodeNo.toStr()
         item.addFields({"parentId": obj.parentId, "seasonNumber": obj.seasonNo.toStr()})
-
     end for
 
     m.top.output = content

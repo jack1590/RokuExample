@@ -23,10 +23,13 @@ end sub
 
 sub onFocusChanged(event)
   if m.top.isInFocusChain() and not m.rowList.isInFocusChain()
-    m.infoMoviesTask.control = "RUN"
+    if m.infoMoviesTask <> invalid
+      m.infoMoviesTask.control = "RUN"
+    else
+      m.rowList.setFocus(true)
+    end if
   end if 
 end sub
-
 
 sub onInfoRecived(event)
   m.infoMoviesTask = invalid

@@ -2,6 +2,7 @@ sub init()
   m.top.backgroundURI = "pkg:/images/DeepSpace.jpg"
 
   m.viewHandler = CreateObject("RoSGNode","ViewHandler")
+  m.top.viewHandler = m.viewHandler
   m.top.appendChild(m.viewHandler)
 
   m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
@@ -28,6 +29,9 @@ function onKeyEvent(key, press) as boolean
   if(press)
     if(key = "options")
       m.viewHandler.goToView = "SearchView"
+      handle = true
+    else if(key = "back")
+      m.viewHandler.callFunc("backView")
       handle = true
     end if
   end if

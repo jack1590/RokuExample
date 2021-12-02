@@ -11,3 +11,13 @@ sub onGoToViewChanged(event)
     if lastView <> invalid then lastView.visible = false
     m.viewStack.push(currentView) 
 end sub
+
+sub backView()
+    toRemoveView = m.viewStack.pop() ' remove last element
+    m.top.removeChild(toRemoveView)
+    lastView = m.viewStack.peek() ' take the last element
+    if(lastView <> invalid) 
+        lastView.visible = true
+        lastView.setFocus(true)
+    end if
+end sub
