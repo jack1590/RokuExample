@@ -10,7 +10,7 @@
             "name": "BrightScript Debug: Launch",
             "stopOnEntry": false,
             "host": "${promptForHost}",
-            "password": "${promptForPassword}",
+            "password": "0978",
             "rootDir": "${workspaceFolder}",
             "retainStagingFolder": true,
             "injectRaleTrackerTask": true,
