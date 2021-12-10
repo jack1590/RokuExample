@@ -51,5 +51,10 @@ end function
 sub onRowItemSelected(event)
   indexPositions = event.getData()
   content = m.searchResults.content.getChild(indexPositions[0]).getChild(indexPositions[1])
+  m.global.setField("vodDetail", vodDetail())
   m.top.getScene().viewHandler.goToView = "DetailView"
 end sub
+
+function vodDetail()
+  return m.content
+end function

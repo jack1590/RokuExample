@@ -4,6 +4,7 @@
 
   <interface>
     <field id="viewHandler" type="node" />
+    <field id="vodDetail" type="node" />
   </interface>
   
   <children>

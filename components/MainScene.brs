@@ -7,6 +7,7 @@ sub init()
 
   m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
   m.global.addFields({"config": {}})
+  m.global.addFields({"vodDetail": createObject("roSGNode", "node")})
   m.global.observeField("config", "onConfigReady")
   m.config = CreateObject("RoSGNode", "Config")
 
