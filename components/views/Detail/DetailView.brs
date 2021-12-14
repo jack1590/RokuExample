@@ -4,7 +4,12 @@ sub init()
   m.poster = m.top.findNode("poster")
   m.title.font = m.global.config.fonts.large
   m.description.font = m.global.config.fonts.small
-  m.poster.uri = m.global.vodDetail.FHDPOSTERURL
-  m.title.text = m.global.vodDetail.TITLE
-  m.description.text = m.global.vodDetail.DESCRIPTION
+  m.top.observeField("content", "onContentReceived")
+end sub
+
+sub onContentReceived(event)
+  content = event.getData()
+  m.poster.uri = content.FHDPOSTERURL
+  m.title.text = content.TITLE
+  m.description.text = content.DESCRIPTION
 end sub

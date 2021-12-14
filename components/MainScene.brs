@@ -7,7 +7,6 @@ sub init()
 
   m.apiTokenTask = CreateObject("RoSGNode", "ApiTokenTask")
   m.global.addFields({"config": {}})
-  m.global.addFields({"vodDetail": createObject("roSGNode", "node")})
   m.global.observeField("config", "onConfigReady")
   m.config = CreateObject("RoSGNode", "Config")
 
@@ -22,14 +21,14 @@ end sub
 sub onTokenRecived(event)
   m.apiTokenTask = invalid
   m.global.addFields({"apiToken": event.getData()})
-  m.viewHandler.goToView = "HomeView"
+  m.viewHandler.callFunc("goToView", {name: "HomeView"})
 end sub
 
 function onKeyEvent(key, press) as boolean
   handle = false
   if(press)
     if(key = "options")
-      m.viewHandler.goToView = "SearchView"
+      m.viewHandler.callFunc("goToView", {name: "SearchView"})
       handle = true
     else if(key = "back")
       m.viewHandler.callFunc("backView")

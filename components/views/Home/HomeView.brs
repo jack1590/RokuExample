@@ -41,6 +41,6 @@ end sub
 sub onRowItemSelected(event)
   indexPositions = event.getData()
   content = m.rowList.content.getChild(indexPositions[0]).getChild(indexPositions[1])
-  m.global.setField("vodDetail", content)
-  m.top.getScene().viewHandler.goToView = "DetailView"
+  fields = {"content": content}
+  m.top.getScene().viewHandler.callFunc("goToView", {"name": "DetailView", "fields": fields})
 end sub

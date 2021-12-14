@@ -3,9 +3,8 @@
  <script type="text/brightscript" uri="ViewHandler.brs"/>
     <interface>
 
-      <field id="goToView" type="string" onChange="onGoToViewChanged" alwaysNotify="true" />
-
       <function name="backView" />
+      <function name="goToView" />
       
     </interface>
 

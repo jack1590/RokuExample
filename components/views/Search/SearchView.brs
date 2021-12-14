@@ -36,7 +36,6 @@ function onKeyEvent(key, press) as boolean
   if press
     if(key = "right" and m.searchResults.content <> invalid and m.inputKeyboard.isInFocusChain())
       m.searchResults.setFocus(true)
-      'm.top.getScene().viewHandler.goToView = "DetailView"
     else if(key = "left" and m.searchResults.isInFocusChain())
       m.inputKeyboard.setFocus(true)
     end if
@@ -48,7 +47,7 @@ end function
 sub onRowItemSelected(event)
   indexPositions = event.getData()
   content = m.searchResults.content.getChild(indexPositions[0]).getChild(indexPositions[1])
-  m.global.setField("vodDetail", content)
-  m.top.getScene().viewHandler.goToView = "DetailView"
+  fields = {"content": content}
+  m.top.getScene().viewHandler.callFunc("goToView", {"name": "DetailView", "fields": fields})
 end sub
 
