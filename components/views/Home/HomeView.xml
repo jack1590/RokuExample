@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name= "HomeView" extends="Group">
   <script type="text/brightscript" uri="HomeView.brs" />
+  
   <children>
 
     <LayoutGroup
@@ -9,7 +10,6 @@
       itemSpacings="[100]">
 
       <Label id="title" color="#FFFFFF" text="What you want to watch?" />
-        
 
       <RowList
         id="rowList"

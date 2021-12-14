@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "DetailView" extends="Group">
+  <script type="text/brightscript" uri="DetailView.brs" />
+  <interface>
+    <field id="content" type="node" />
+  </interface>
+  <children>
+
+    <LayoutGroup
+      id="group"
+      horizAlignment="center"
+      itemSpacings="[10]"
+      translation="[960,0]">
+
+      <Poster
+        id="poster"
+        uri="https://upload.wikimedia.org/wikipedia/commons/5/56/Bsodwindows10.png"
+        width="1920"
+        height="700"/>
+
+      <Label id="title" color="#FFFFFF" text="movie..." />
+
+      <Label id="description" color="#FFFFFF" text="it´s about..." />
+        
+    </LayoutGroup>
+
+  </children>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ViewHandler" extends="group">
+ <script type="text/brightscript" uri="ViewHandler.brs"/>
+    <interface>
+
+      <function name="backView" />
+      <function name="goToView" />
+      
+    </interface>
+
+  <children>
+
+  </children>
+</component>

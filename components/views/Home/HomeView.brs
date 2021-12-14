@@ -6,6 +6,7 @@ sub init()
   m.rowList = m.top.findNode("rowList")
 
   m.top.observeField("focusedChild", "onFocusChanged")
+  m.rowList.observeField("rowItemSelected", "onRowItemSelected")
 
   m.title.font = m.global.config.fonts.large
 
@@ -23,13 +24,23 @@ end sub
 
 sub onFocusChanged(event)
   if m.top.isInFocusChain() and not m.rowList.isInFocusChain()
-    m.infoMoviesTask.control = "RUN"
+    if m.infoMoviesTask <> invalid
+      m.infoMoviesTask.control = "RUN"
+    else
+      m.rowList.setFocus(true)
+    end if
   end if 
 end sub
-
 
 sub onInfoRecived(event)
   m.infoMoviesTask = invalid
   m.rowList.content = event.getData()
   m.rowList.setFocus(true)
+end sub
+
+sub onRowItemSelected(event)
+  indexPositions = event.getData()
+  content = m.rowList.content.getChild(indexPositions[0]).getChild(indexPositions[1])
+  fields = {"content": content}
+  m.top.getScene().viewHandler.callFunc("goToView", {"name": "DetailView", "fields": fields})
 end sub

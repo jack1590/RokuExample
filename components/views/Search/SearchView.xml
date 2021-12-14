@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "SearchView" extends="Group">
+  <script type="text/brightscript" uri="SearchView.brs" />
+  
+  <children>
+
+    <LayoutGroup
+      id="group"
+      layoutDirection="horiz"
+      itemSpacings="[50]"
+      translation="[100,200]">
+
+      <MiniKeyboard 
+        id="inputKeyboard"/>
+
+      <RowList 
+        id="searchResults" 
+        itemComponentName="VodItem"
+        numRows="1"
+        rowItemSize="[[410, 500], [210, 300]]"
+        itemSize="[800, 500]"
+        showRowLabel="[true]"
+        rowItemSpacing="[[50, 50]]"
+        itemSpacing="[50, 50]"
+        rowLabelOffset="[[5, 20]]" />
+
+    </LayoutGroup>
+
+
+  </children>
+</component>
