@@ -4,9 +4,6 @@ sub init()
   m.group = m.top.findNode("group") 
   m.title = m.top.findNode("title")
   m.rowList = m.top.findNode("rowList")
-  m.viewHandler = CreateObject("RoSGNode","ViewHandler")
-  m.top.viewHandler = m.viewHandler
-  m.top.appendChild(m.viewHandler)
 
   m.top.observeField("focusedChild", "onFocusChanged")
   m.rowList.observeField("rowItemSelected", "onRowItemSelected")
@@ -43,11 +40,7 @@ end sub
 
 sub onRowItemSelected(event)
   indexPositions = event.getData()
-  m.content = m.rowList.content.getChild(indexPositions[0]).getChild(indexPositions[1])
-  m.global.setField("vodDetail", vodDetail())
+  content = m.rowList.content.getChild(indexPositions[0]).getChild(indexPositions[1])
+  m.global.setField("vodDetail", content)
   m.top.getScene().viewHandler.goToView = "DetailView"
 end sub
-
-function vodDetail()
-return m.content
-end function

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name= "HomeView" extends="Group">
   <script type="text/brightscript" uri="HomeView.brs" />
-
-  <interface>
-    <field id="viewHandler" type="node" />
-    <field id="vodDetail" type="node" />
-  </interface>
   
   <children>
 

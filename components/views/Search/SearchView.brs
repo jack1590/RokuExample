@@ -7,9 +7,6 @@ sub init()
   m.searchTask.observeField("output", "onSearchCompleted")
   m.top.observeField("focusedChild", "onFocusChanged")
   m.searchResults.observeField("rowItemSelected", "onRowItemSelected")
-  m.viewHandler = CreateObject("RoSGNode","ViewHandler")
-  m.top.viewHandler = m.viewHandler
-  m.top.appendChild(m.viewHandler)
 end sub
 
 sub onFocusChanged(event)
@@ -51,10 +48,7 @@ end function
 sub onRowItemSelected(event)
   indexPositions = event.getData()
   content = m.searchResults.content.getChild(indexPositions[0]).getChild(indexPositions[1])
-  m.global.setField("vodDetail", vodDetail())
+  m.global.setField("vodDetail", content)
   m.top.getScene().viewHandler.goToView = "DetailView"
 end sub
 
-function vodDetail()
-  return m.content
-end function
