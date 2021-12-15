@@ -7,21 +7,39 @@
   <children>
 
     <LayoutGroup
-      id="group"
-      horizAlignment="center"
-      itemSpacings="[10]"
-      translation="[960,0]">
+      id = "group"
+      horizAlignment = "center"
+      itemSpacings = "[10]"
+      translation = "[960,0]">
 
       <Poster
-        id="poster"
-        uri="https://upload.wikimedia.org/wikipedia/commons/5/56/Bsodwindows10.png"
-        width="1920"
-        height="700"/>
+        id = "poster"
+        uri = "https://upload.wikimedia.org/wikipedia/commons/5/56/Bsodwindows10.png"
+        width = "1920"
+        height = "700"/>
 
-      <Label id="title" color="#FFFFFF" text="movie..." />
+        <Label id="title" color="#FFFFFF" text="movie..." />
 
-      <Label id="description" color="#FFFFFF" text="it´s about..." />
-        
+      <LayoutGroup
+        layoutDirection = "horiz"
+        id = "buttonGroup"
+        horizAlignment = "center"
+        itemSpacings = "[10]">
+
+        <Label id="description" color="#FFFFFF" text="it´s about..." />
+
+      <LayoutGroup
+        id = "buttonGroup"
+        horizAlignment = "center"
+        itemSpacings = "[10]">
+
+        <ButtonDesign id="playButton" />
+        <ButtonDesign id="backButton" />
+
+      </LayoutGroup>
+
+      </LayoutGroup>
+
     </LayoutGroup>
 
   </children>

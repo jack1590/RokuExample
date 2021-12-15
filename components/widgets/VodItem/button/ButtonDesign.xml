@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ButtonDesign" extends="group">
+ <script type="text/brightscript" uri="ButtonDesign.brs"/>
+
+  <interface>
+
+    <field id="buttonDesign" type="node" />
+    
+  </interface>
+
+  <children>
+
+    <LayoutGroup
+     id="group"
+     horizAlignment="center"
+     itemSpacings="[30]">
+
+      <Rectangle
+        id="focusEdge"
+        color="#00D4D900"
+        width="94"
+        height="44">
+
+        <Rectangle
+          id="background"
+          color="#FFFFFF"
+          width="90"
+          height="40"
+          translation="[2,2]">
+
+          <Label
+            id="name"
+            text="play"
+            color="#586162"
+            translation="[9,2]"/>
+
+        </Rectangle>
+
+      </Rectangle>
+
+    </LayoutGroup>
+
+  </children>
+</component>

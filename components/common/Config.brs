@@ -5,7 +5,7 @@ end sub
 function Config()
   return {
     "api": {
-        "baseUrl": "http://192.168.20.22:8080/"
+        "baseUrl": "http://192.168.20.22:8080/" 
     },
     "fonts": {
       "large": createFont("pkg:/fonts/Netflix-Semibold.ttf", 74),
