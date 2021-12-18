@@ -30,7 +30,18 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.backButton.setFocus(true)
     else if (key = "up" and m.backButton.hasFocus())
       m.playButton.setFocus(true)
+    else if (key = "OK")
+      if m.playButton.isInFocusChain() then playVideo()
+      if m.backButton.isInFocusChain() then goBack()
     end if
   end if 
   return handled
 end function
+
+sub playVideo()
+
+end sub
+
+sub goBack()
+  m.top.getScene().viewHandler.callFunc("backView")
+end sub
