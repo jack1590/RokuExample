@@ -28,19 +28,25 @@
 
         <Label id="description" color="#FFFFFF" text="it´s about..." />
 
-      <LayoutGroup
-        id = "buttonGroup"
-        horizAlignment = "center"
-        itemSpacings = "[10]">
+        <LayoutGroup
+          id = "buttonGroup"
+          horizAlignment = "center"
+          itemSpacings = "[10]">
 
-        <ButtonDesign id="playButton" text="play"/>
-        <ButtonDesign id="backButton" text="back"/>
+          <ButtonDesign id="playButton" text="play"/>
+          <ButtonDesign id="backButton" text="back"/>
 
-      </LayoutGroup>
+        </LayoutGroup>
 
       </LayoutGroup>
 
     </LayoutGroup>
+
+    <Video 
+      id="video" 
+      width="1920"
+      height="1080"
+      visible="false" />
 
   </children>
 </component>

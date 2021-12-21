@@ -50,4 +50,3 @@ sub onRowItemSelected(event)
   fields = {"content": content}
   m.top.getScene().viewHandler.callFunc("goToView", {"name": "DetailView", "fields": fields})
 end sub
-

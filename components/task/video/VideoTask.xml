@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name= "VideoTask" extends="Task">
+<script type="text/brightscript" uri="VideoTask.brs" />
+
+<interface>
+    <field id="movie" type="string" />
+    <field id="output" type="node" />
+</interface>
+
+</component>
