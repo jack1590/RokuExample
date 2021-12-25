@@ -56,5 +56,6 @@ sub playVideo()
 end sub
 
 sub onVideoSelected(event)
-
+content = event.getData()
+m.video.content = content
 end sub
