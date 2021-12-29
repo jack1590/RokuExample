@@ -56,6 +56,8 @@ sub playVideo()
 end sub
 
 sub onVideoSelected(event)
-content = event.getData()
-m.video.content = content
+  videoContent = event.getData()
+  videoContent.title = m.content.title
+  m.video.content = videoContent
+  m.videoTask = invalid
 end sub
