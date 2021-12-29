@@ -16,3 +16,7 @@ splash_min_time= 1000
 
 # Resolution
 ui_resolutions=sd,hd,fhd
+
+#Widevine
+requires_widevine_drm=1
+requires_widevine_version=1.0
